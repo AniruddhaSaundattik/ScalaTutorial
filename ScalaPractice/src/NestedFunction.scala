@@ -1,0 +1,3 @@
+object NestedFunction extends App {
+
+}
