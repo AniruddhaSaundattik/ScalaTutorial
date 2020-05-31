@@ -1,4 +1,4 @@
-object ErrorsQ extends App {
+object EitherReduction extends App {
   def findFirstError(l: List[Either[String, Int]]): Option[Either[String, Int]] ={
     l.filter(x => x.isLeft).headOption
     l.find(x => x.isLeft)
