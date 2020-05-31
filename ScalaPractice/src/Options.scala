@@ -31,4 +31,12 @@ object Options extends App {
 
     }
   }
+  
+  def map3[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = {
+   a.flatMap(oA => {
+     b.map(oB => {
+       f(oA,oB)
+     })
+   })
+  }
 }
