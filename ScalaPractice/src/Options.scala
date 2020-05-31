@@ -18,4 +18,17 @@ object Options extends App {
   //better way of handling the if else with option
   println(num3.getOrElse("Empty"))
   println(num1.getOrElse("Empty"))
+  
+  def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = {
+    a match {
+      case Some(value) => {
+        b match {
+          case Some(valueB) => Some(f(value,valueB))
+          case None => None
+        }
+      }
+      case None => None
+
+    }
+  }
 }
